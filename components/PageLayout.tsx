@@ -14,6 +14,9 @@ export default function PageLayout({ children }: { children: ReactNode }) {
             <Wordmark className="text-2xl" />
           </Link>
           <nav className="flex items-center gap-4 text-sm font-bold text-ocean">
+            <Link href="/pulau/arab" className="hover:underline">
+              Pulau
+            </Link>
             <Link href="/styleguide" className="hover:underline">
               Gaya
             </Link>
