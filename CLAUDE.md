@@ -80,8 +80,16 @@ app/                  Halaman (App Router)
   layout.tsx          Root layout: muat font Nunito & Amiri, metadata
   page.tsx            Beranda "NusaWorld"
   styleguide/page.tsx Panduan gaya (semua warna + contoh Nunito & Amiri)
+  komponen/page.tsx   Galeri komponen brand reusable
   globals.css         Token Tailwind (@theme) + gaya global + kelas .ar
-components/           Komponen kecil & reusable (Wordmark, ColorSwatch, ...)
+components/           Komponen kecil & reusable:
+  Wordmark.tsx        Logo teks "NusaWorld" (Nusa ocean, World island)
+  Turtle.tsx          Maskot penyu (SVG, prop size)
+  Button.tsx          Tombol playful (variant primary/secondary, size md/lg)
+  Card.tsx            Kartu konten
+  Badge.tsx           Badge/pill berwarna (prop tone)
+  PageLayout.tsx      Kerangka halaman: header + konten + footer
+  ColorSwatch.tsx     Kotak warna untuk panduan gaya
 lib/                  Helper & DATA (brand.ts: nama, tagline, palet warna)
 ```
 
