@@ -83,7 +83,10 @@ app/                  Halaman (App Router)
   coba/page.tsx       Quest pertama yang bisa dimainkan (huruf Ba)
   paket/page.tsx      3 tier paket (Mandiri/Kelas/Privat) — TANPA pembayaran
   penjajakan/page.tsx Minigame diagnostik level → rekomendasi paket
-  styleguide/page.tsx Panduan gaya (semua warna + contoh Nunito & Amiri)
+  alat/page.tsx       Hub alat belajar
+  alat/tashrif/       Alat konjugasi (tashrif) kata kerja Arab (SEO)
+  alat/kamus/         Kamus mini Arab–Indonesia, cari real-time (SEO)
+  gaya/page.tsx       Panduan gaya (semua warna + contoh Nunito & Amiri)
   komponen/page.tsx   Galeri komponen brand reusable
   globals.css         Token Tailwind (@theme) + gaya global + .ar + animasi
 components/           Komponen kecil & reusable:
@@ -96,7 +99,9 @@ components/           Komponen kecil & reusable:
   LoanWordCard.tsx    Kartu kata serapan interaktif (flip, "use client")
   DiagnosticGame.tsx  Minigame penjajakan interaktif ("use client")
   QuestPlayer.tsx     Mesin quest interaktif: langkah, feedback, reward ("use client")
-  PageLayout.tsx      Kerangka halaman: header + konten + footer
+  TashrifTool.tsx     Alat tashrif interaktif ("use client")
+  KamusTool.tsx       Alat kamus pencari real-time ("use client")
+  PageLayout.tsx      Kerangka halaman: header + konten + footer (peta-situs)
   ColorSwatch.tsx     Kotak warna untuk panduan gaya
 lib/                  Helper & DATA:
   brand.ts            Nama, tagline, palet warna
@@ -105,6 +110,8 @@ lib/                  Helper & DATA:
   packages.ts         DATA paket belajar (tanpa harga/pembayaran)
   diagnostic.ts       DATA pertanyaan & level penjajakan
   quests.ts           DATA quest (langkah, opsi, jawaban, reward)
+  verbs.ts            DATA kata kerja + generator tashrif (fi'il madhi)
+  dictionary.ts       DATA kamus Arab–Indonesia
 ```
 
 ## PERINTAH
