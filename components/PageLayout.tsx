@@ -17,6 +17,9 @@ export default function PageLayout({ children }: { children: ReactNode }) {
             <Link href="/pulau/arab" className="hover:underline">
               Pulau
             </Link>
+            <Link href="/paket" className="hover:underline">
+              Paket
+            </Link>
             <Link href="/styleguide" className="hover:underline">
               Gaya
             </Link>

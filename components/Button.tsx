@@ -1,10 +1,13 @@
 import type { ButtonHTMLAttributes } from "react";
+import Link from "next/link";
 
 // Tombol playful: membulat penuh, tebal, ada respon saat ditekan.
 // variant: "primary" (ocean) | "secondary" (garis ocean). size: "md" | "lg".
+// Jika `href` diisi, dirender sebagai Link (navigasi) dengan gaya yang sama.
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: "primary" | "secondary";
   size?: "md" | "lg";
+  href?: string;
 };
 
 const base =
@@ -26,12 +29,23 @@ export default function Button({
   variant = "primary",
   size = "md",
   className = "",
+  href,
+  children,
   ...props
 }: ButtonProps) {
+  const classes = `${base} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
+
+  if (href) {
+    return (
+      <Link href={href} className={classes}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <button
-      className={`${base} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
-      {...props}
-    />
+    <button className={classes} {...props}>
+      {children}
+    </button>
   );
 }
