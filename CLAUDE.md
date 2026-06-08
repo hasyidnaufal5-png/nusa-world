@@ -80,23 +80,28 @@ app/                  Halaman (App Router)
   layout.tsx          Root layout: muat font Nunito & Amiri, metadata
   page.tsx            Beranda — landing Pulau Arab (hero + kata serapan)
   pulau/[island]/     Halaman pulau (mesin generik, isi dari data)
+  paket/page.tsx      3 tier paket (Mandiri/Kelas/Privat) — TANPA pembayaran
+  penjajakan/page.tsx Minigame diagnostik level → rekomendasi paket
   styleguide/page.tsx Panduan gaya (semua warna + contoh Nunito & Amiri)
   komponen/page.tsx   Galeri komponen brand reusable
   globals.css         Token Tailwind (@theme) + gaya global + .ar + animasi
 components/           Komponen kecil & reusable:
   Wordmark.tsx        Logo teks "NusaWorld" (Nusa ocean, World island)
   Turtle.tsx          Maskot penyu (SVG, prop size)
-  Button.tsx          Tombol playful (variant primary/secondary, size md/lg)
+  Button.tsx          Tombol playful (variant, size; jadi Link bila ada href)
   Card.tsx            Kartu konten
   Badge.tsx           Badge/pill berwarna (prop tone)
   GlyphCard.tsx       Kartu satu aksara (mesin generik)
   LoanWordCard.tsx    Kartu kata serapan interaktif (flip, "use client")
+  DiagnosticGame.tsx  Minigame penjajakan interaktif ("use client")
   PageLayout.tsx      Kerangka halaman: header + konten + footer
   ColorSwatch.tsx     Kotak warna untuk panduan gaya
 lib/                  Helper & DATA:
   brand.ts            Nama, tagline, palet warna
   islands.ts          DATA pulau & aksara (tambah pulau/aksara = tambah data)
   loanwords.ts        DATA kata serapan Indonesia–Arab
+  packages.ts         DATA paket belajar (tanpa harga/pembayaran)
+  diagnostic.ts       DATA pertanyaan & level penjajakan
 ```
 
 ## PERINTAH
