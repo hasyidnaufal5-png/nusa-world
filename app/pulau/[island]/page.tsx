@@ -87,7 +87,9 @@ export default async function IslandPage({ params }: Params) {
                 <span className="text-ocean">/{first.latin}/</span>
               </h3>
               <p className="max-w-prose text-night/70">{first.hint}</p>
-              <Button>Mulai belajar “{first.name}”</Button>
+              <Button href={data.questHref}>
+                Mulai belajar “{first.name}”
+              </Button>
             </div>
           </div>
         </section>

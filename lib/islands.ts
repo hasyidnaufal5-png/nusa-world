@@ -33,6 +33,8 @@ export type Island = {
   greeting: { text: string; latin: string; meaning: string };
   /** id aksara yang menjadi pelajaran pertama. */
   firstGlyph: string;
+  /** Tautan ke quest pertama pulau ini (opsional). */
+  questHref?: string;
   glyphs: Glyph[];
 };
 
@@ -53,6 +55,7 @@ export const islands: Island[] = [
       meaning: "Semoga keselamatan untukmu",
     },
     firstGlyph: "ba",
+    questHref: "/coba",
     glyphs: [
       {
         id: "alif",
