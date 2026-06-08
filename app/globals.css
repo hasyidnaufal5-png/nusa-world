@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* ============================================================
+   NusaWorld — token desain (Tailwind v4 @theme)
+   Tambah/ubah warna di sini → otomatis tersedia sebagai utility
+   bg-*, text-*, border-*, ring-*, dst. Sumber kebenaran hex juga
+   ada di lib/brand.ts (dipakai panduan gaya).
+   ============================================================ */
+@theme {
+  /* Warna brand */
+  --color-ocean: #1b6ca8;
+  --color-island: #2eaf73;
+  --color-gold: #f5c518;
+  --color-shell: #085041;
+  --color-teal: #5dcaa5;
+  --color-night: #042c53;
+
+  /* Warna aksara (satu per pulau bahasa) */
+  --color-arab: #2471a3;
+  --color-japan: #8e44ad;
+  --color-mandarin: #1e8449;
+  --color-korea: #d35400;
+  --color-hindi: #e74c3c;
+  --color-nusa: #ef9f27;
+
+  /* Warna maskot penyu */
+  --color-turtle-body: #2eaf73;
+  --color-turtle-fin: #1d9e75;
+  --color-turtle-eye: #042c53;
+  --color-turtle-cheek: #f0997b;
+
+  /* Font: Nunito untuk UI (default), Amiri untuk teks Arab */
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: var(--font-amiri), "Amiri", serif;
+}
+
+/* Latar terang lembut + teks gelap nyaman dibaca */
+:root {
+  --background: #f3f9fc; /* biru sangat muda */
+  --foreground: #042c53; /* Night Ocean */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sudut membulat default yang lembut untuk elemen interaktif.
+   Komponen tetap bisa override dengan utility rounded-* bila perlu. */
+button,
+input,
+select,
+textarea {
+  border-radius: 0.75rem;
+}
+
+/* Helper teks Arab: font Amiri + arah kanan-ke-kiri.
+   Pakai: <span class="ar" lang="ar">بَ</span> */
+.ar {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  unicode-bidi: isolate;
+  line-height: 1.7;
+}
