@@ -80,6 +80,7 @@ app/                  Halaman (App Router)
   layout.tsx          Root layout: muat font Nunito & Amiri, metadata
   page.tsx            Beranda — landing Pulau Arab (hero + kata serapan)
   pulau/[island]/     Halaman pulau (mesin generik, isi dari data)
+  coba/page.tsx       Quest pertama yang bisa dimainkan (huruf Ba)
   paket/page.tsx      3 tier paket (Mandiri/Kelas/Privat) — TANPA pembayaran
   penjajakan/page.tsx Minigame diagnostik level → rekomendasi paket
   styleguide/page.tsx Panduan gaya (semua warna + contoh Nunito & Amiri)
@@ -94,6 +95,7 @@ components/           Komponen kecil & reusable:
   GlyphCard.tsx       Kartu satu aksara (mesin generik)
   LoanWordCard.tsx    Kartu kata serapan interaktif (flip, "use client")
   DiagnosticGame.tsx  Minigame penjajakan interaktif ("use client")
+  QuestPlayer.tsx     Mesin quest interaktif: langkah, feedback, reward ("use client")
   PageLayout.tsx      Kerangka halaman: header + konten + footer
   ColorSwatch.tsx     Kotak warna untuk panduan gaya
 lib/                  Helper & DATA:
@@ -102,6 +104,7 @@ lib/                  Helper & DATA:
   loanwords.ts        DATA kata serapan Indonesia–Arab
   packages.ts         DATA paket belajar (tanpa harga/pembayaran)
   diagnostic.ts       DATA pertanyaan & level penjajakan
+  quests.ts           DATA quest (langkah, opsi, jawaban, reward)
 ```
 
 ## PERINTAH
